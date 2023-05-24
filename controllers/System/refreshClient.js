@@ -3,6 +3,8 @@ const topicBuzzer = 'minhcao2000/feeds/bbc-alarm';
 
 const historyController = require('../historyController')
 
+const mailerController = require('../mailerController')
+
 refreshClient = (client, data, signal) => {
     if (signal) {
         client.on('message', (topic, message) => {
@@ -38,6 +40,7 @@ refreshClient = (client, data, signal) => {
                         }
                         console.log('Send Message: ', parseInt(message), topicBuzzer);
                     })
+                    mailerController.mailer()
                 }
                 data.sensor = temp
                 historyController.saveStatusSystem({systemS : signal, sensorS: data.sensor == 1})

@@ -9,6 +9,7 @@ const systemController = require('../controllers/System/index')
 
 router.post('/led',verifyToken, systemController.controlLed)
 router.post('/buzzer',verifyToken, systemController.controlBuzzer)
+router.post('/sensor',verifyToken, systemController.controlSensor)
 router.get('/change',verifyToken, systemController.changeStatus)
 router.get('/',verifyToken, systemController.getStatus)
 

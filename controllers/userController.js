@@ -94,7 +94,7 @@ class UserController {
 
     async profile(req, res) {
         try {
-            const user = await User.find( {_id: req.userId} )
+            const user = await User.findOne( {_id: req.userId} )
             res.json({
                 success: true,
                 user

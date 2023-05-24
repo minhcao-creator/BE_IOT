@@ -6,7 +6,7 @@ const SendData = require('./handleSendData')
 
 const topicLed = 'minhcao2000/feeds/bbc-led';
 const topicBuzzer = 'minhcao2000/feeds/bbc-alarm';
-
+const topicSensor = 'minhcao2000/feeds/sensor';
 
 const historyController = require('../historyController')
 
@@ -24,13 +24,26 @@ class System {
     getStatus (req, res) {
         res.json({
             success: true,
-            data
+            data,
+            signal
         })
     }
 
     controlLed (req, res) {
         try {   
             SendData (client, topicLed, req.body.message)
+            res.json({
+                success: true
+            })
+        } catch (error) {
+            consolee.log(error)
+            res.json({error})
+        }
+    }
+
+    controlSensor (req, res) {
+        try {   
+            SendData (client, topicSensor, req.body.message)
             res.json({
                 success: true
             })

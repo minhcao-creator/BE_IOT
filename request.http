@@ -19,7 +19,7 @@ POST http://localhost:5000/login
 Content-Type: application/json
 
 {
-    "phone":"0332060870",
+    "phone":"11111111",
     "password": "1"
 }
 
@@ -49,32 +49,20 @@ Content-Type: application/json
 
 ###
 GET http://localhost:5000/status
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDViNDY5YWZlNWVlZTE3NmZjYTgzODciLCJpYXQiOjE2ODM3MDM0NTAsImV4cCI6MTY4MzcwNDY1MH0.V1CoTznBAMj5-QpZNnt7xaspW_1bpGrO_QQRevriolA
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDVlODRiNDk3OWNhOTU4MWQxNjZmMGMiLCJpYXQiOjE2ODQ4OTA0OTYsImV4cCI6MTY4NDg5NzY5Nn0.GSLHGk4dMV-OMum_SO2EzSByBpCEKB7-oFNi6XtLovQ
 
 
 
 ###
 GET http://localhost:5000/status/change
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDViMzE3MzYzZTBiZDAzZGMwYzRhOTgiLCJpYXQiOjE2ODM2OTgwNDksImV4cCI6MTY4MzcwNTI0OX0.RUTS3YcMw743vjcWhIqLlpV7vuTYaGJp-q2akR2VCnw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDVlODRiNDk3OWNhOTU4MWQxNjZmMGMiLCJpYXQiOjE2ODQ4OTA0OTYsImV4cCI6MTY4NDg5NzY5Nn0.GSLHGk4dMV-OMum_SO2EzSByBpCEKB7-oFNi6XtLovQ
 
 
 
 
 ###
 POST http://localhost:5000/status/led
-Authorization: Beare eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDViMzVlYTMxYjQ1YzUyMTJjZDlmYzAiLCJpYXQiOjE2ODM3MDE5OTAsImV4cCI6MTY4MzcwOTE5MH0.enTBCYeB9Dh30lrfVsXF5fcYX388KXe_1_3h35b_5IA
-Content-Type: application/json
-
-{
-    "message" : "0"
-}
-
-
-
-
-###
-POST http://localhost:5000/status/buzzer
-Authorization: Beare eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDViMzVlYTMxYjQ1YzUyMTJjZDlmYzAiLCJpYXQiOjE2ODM3MDE5OTAsImV4cCI6MTY4MzcwOTE5MH0.enTBCYeB9Dh30lrfVsXF5fcYX388KXe_1_3h35b_5IA
+Authorization: Beare eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDVlODRiNDk3OWNhOTU4MWQxNjZmMGMiLCJpYXQiOjE2ODQ4OTA0OTYsImV4cCI6MTY4NDg5NzY5Nn0.GSLHGk4dMV-OMum_SO2EzSByBpCEKB7-oFNi6XtLovQ
 Content-Type: application/json
 
 {
@@ -85,8 +73,30 @@ Content-Type: application/json
 
 
 ###
+POST http://localhost:5000/status/buzzer
+Authorization: Beare eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDVlODRiNDk3OWNhOTU4MWQxNjZmMGMiLCJpYXQiOjE2ODQ4OTA0OTYsImV4cCI6MTY4NDg5NzY5Nn0.GSLHGk4dMV-OMum_SO2EzSByBpCEKB7-oFNi6XtLovQ
+Content-Type: application/json
+
+{
+    "message" : "0"
+}
+
+
+###
+POST http://localhost:5000/status/sensor
+Authorization: Beare eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDVlODRiNDk3OWNhOTU4MWQxNjZmMGMiLCJpYXQiOjE2ODQ4OTA0OTYsImV4cCI6MTY4NDg5NzY5Nn0.GSLHGk4dMV-OMum_SO2EzSByBpCEKB7-oFNi6XtLovQ
+Content-Type: application/json
+
+{
+    "message" : "0"
+}
+
+
+
+
+###
 GET http://localhost:5000/history
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDViMzQyZjAzNDQzNzQ4ZjEwOTc0MzEiLCJpYXQiOjE2ODM2OTg3NjcsImV4cCI6MTY4MzcwNTk2N30.s6Mhi2jWIzpqfhekO5c0Sf4cg5VQqIGe2DnifrTnTEo
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDVlODRiNDk3OWNhOTU4MWQxNjZmMGMiLCJpYXQiOjE2ODQ4ODkzNTcsImV4cCI6MTY4NDg5NjU1N30.fMXrprOArCS7z4iEyDV7CmS3ZdiYkMF4S9e6Hy7A5U0
 Content-Type: application/json
 
 {

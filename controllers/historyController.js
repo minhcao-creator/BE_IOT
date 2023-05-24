@@ -6,9 +6,9 @@ class HistoryController {
             var skip = (parseInt(page)-1) * 5;
     
             const histories = await History.find({})
-                        .sort('_id')
+                        .sort({'_id' : 'desc'})
                         .limit(5)
-                        .skip(skip);
+                        .skip(skip)
             return histories
 
         } catch (error) {
@@ -22,9 +22,10 @@ class HistoryController {
             var skip = (parseInt(req.body.page)-1) * 20;
     
             const histories = await History.find({})
-                        .sort('_id')
+                        .sort({'_id' : 'desc'})
                         .limit(20)
-                        .skip(skip);
+                        .skip(skip)
+            
             res.json({
                 success: true,
                 histories

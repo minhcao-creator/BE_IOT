@@ -12,7 +12,7 @@ function connectAda() {
         port: 1883,
         connectTimeout: 4000,
         username: 'minhcao2000',
-        password: '',
+        password: 'aio_hhup10EwxHzNfxqpowheW5QoQFu1',
         reconnectPeriod: 1000,
     })
     client.on('connect', () => {
@@ -20,7 +20,7 @@ function connectAda() {
         client.subscribe([topicSensor, topicLed, topicBuzzer], () => {
             console.log(`Subscribe to all topic`)
         });
-    });
+    }); 
 
     return client
 }

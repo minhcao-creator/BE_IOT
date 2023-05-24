@@ -15,6 +15,9 @@ const userRouter = require('./routes/user')
 const systemRouter = require('./routes/system')
 const historyRouter = require('./routes/history')
 
+// const emailAccounts = require('./controllers/mailerController')
+// emailAccounts.mailer()
+
 app.use('/status', systemRouter)
 app.use('/history', historyRouter)
 app.use('/', userRouter)
